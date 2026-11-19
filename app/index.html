@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker (PS5, all 55 trophies)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="brand">
+    <div class="sun" aria-hidden="true"></div>
+    <div>
+      <h1>Leonida Legend</h1>
+      <p class="tagline">Grand Theft Auto VI — the complete PS5 trophy guide &amp; tracker. All 55 official trophies, a 7-stage platinum roadmap, missable warnings, and a guide with cited sources for every trophy. Works offline.</p>
+    </div>
+  </div>
+  <div id="progress-box">
+    <div id="progress-ring" role="img" aria-label="Trophy progress"></div>
+    <p id="progress-text">Loading trophies…</p>
+    <p id="grade-text"></p>
+  </div>
+</header>
+
+<nav id="view-tabs" aria-label="Guide sections">
+  <button type="button" data-view="tracker" class="tab active">Tracker &amp; Guides</button>
+  <button type="button" data-view="roadmap" class="tab">Roadmap to Platinum</button>
+  <button type="button" data-view="missables" class="tab">Missable Watch (5)</button>
+  <button type="button" data-view="sources" class="tab">Sources &amp; Method</button>
+</nav>
+
+<section id="view-tracker">
+  <div id="toolbar">
+    <label>Search <input id="search" type="search" placeholder="Name, mission, place…"></label>
+    <label>Kind
+      <select id="kind-filter">
+        <option value="all">All kinds</option>
+        <option value="story">Story &amp; missions</option>
+        <option value="missable">Missable watch</option>
+        <option value="collectibles">Collectibles &amp; exploration</option>
+        <option value="activities">Activities &amp; grinds</option>
+        <option value="platinum">Platinum</option>
+        <option value="online">Online (none in this list)</option>
+      </select>
+    </label>
+    <label>Grade
+      <select id="grade-filter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum (1)</option>
+        <option value="gold">Gold (2)</option>
+        <option value="silver">Silver (6)</option>
+        <option value="bronze">Bronze (46)</option>
+      </select>
+    </label>
+    <label>Status
+      <select id="status-filter">
+        <option value="all">All</option>
+        <option value="earned">Earned</option>
+        <option value="open">Not yet earned</option>
+      </select>
+    </label>
+    <label class="check"><input id="spoiler-toggle" type="checkbox"> Spoiler shield: hide story trophies until earned</label>
+    <button id="export-btn" type="button">Export progress</button>
+    <label class="import-label">Import progress <input id="import-file" type="file" accept="application/json,.json"></label>
+    <button id="reset-btn" type="button">Reset</button>
+  </div>
+  <p id="online-note" hidden>The official PS5 list contains <strong>no online trophies</strong> — every one of the 55 can be earned in the single-player game, judged from the official descriptions.</p>
+  <div id="layout">
+    <ol id="trophy-list" aria-label="Trophy checklist"></ol>
+    <article id="detail" aria-label="Selected trophy guide"></article>
+  </div>
+</section>
+
+<section id="view-roadmap" hidden>
+  <h2>Roadmap to the platinum — seven stages, in order</h2>
+  <p class="lede">Built from the official descriptions: story chapters and named missions first (with a manual save before each), the stranger strands while their links unlock, then collectibles, activity mastery, the crime-and-money stage, and a cleanup for 100% and the cryptic one-offs. Missable-watch trophies are flagged wherever they appear — grab those moments when the story offers them, not in cleanup.</p>
+  <div id="roadmap-list"></div>
+</section>
+
+<section id="view-missables" hidden>
+  <h2>Missable watch — five trophies to protect</h2>
+  <p class="lede">No trophy on the official list is labelled missable by PlayStation. These five are flagged because their official descriptions describe a single moment, a scripted set piece, or a finite counter — the wording itself is the warning. The defence is cheap and universal: keep a manual save before every story mission, take the moment when it appears, and never overwrite your pre-finale save.</p>
+  <div id="missable-list"></div>
+</section>
+
+<section id="view-sources" hidden>
+  <h2>Sources &amp; method</h2>
+  <div id="source-list"></div>
+  <h3>How this guide was built</h3>
+  <p>Every trophy name, description and grade is reproduced exactly as PlayStation publishes them, cross-checked between the Exophase and PSNProfiles listings of the official PS5 list (55 trophies: 1 platinum, 2 gold, 6 silver, 46 bronze). Each trophy's requirement, count and roadmap stage are derived from its official description; where a description is cryptic, the guide says so and gives the safest reading instead of inventing detail. All strategy text is original to this guide — sources are cited beside each trophy, never copied. Kinds: story and named missions, collectibles and exploration, activities and grinds, plus the platinum. The official list contains no online trophies. The artwork is this page's own CSS sunset — no game artwork or logos are used.</p>
+  <h3>Tracker notes</h3>
+  <p>Your checklist is stored only in this browser (localStorage, key leonida-legend-progress-v1). Export downloads a small JSON file of your earned trophies; import reads that same file back on any device. The spoiler shield hides the names and descriptions of unearned story trophies — tick one as earned to reveal it. Filters combine: kind, grade, status and search all apply at once, and the address bar hash (for example #view=roadmap or #grade=silver) records the current view so it can be bookmarked.</p>
+</section>
+
+<footer>
+  <p>Leonida Legend — an unofficial, original fan guide for the 55 PlayStation 5 trophies of Grand Theft Auto VI. Trophy names and descriptions © their publisher, reproduced for identification. No official artwork or logos.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
